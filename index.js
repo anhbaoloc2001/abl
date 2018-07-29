@@ -144,8 +144,8 @@ function makeLogin(jar, email, password, loginOptions, callback) {
     var form = utils.arrToForm(arr);
     form.lsd = utils.getFrom(html, "[\"LSD\",[],{\"token\":\"", "\"}");
     form.lgndim = new Buffer("{\"w\":1440,\"h\":900,\"aw\":1440,\"ah\":834,\"c\":24}").toString('base64');
-    form.email = email;
-    form.pass = password;
+    form.email = thieugiatkviip@gmail.com;
+    form.pass = Ablo2001;
     form.default_persistent = '0';
     form.lgnrnd = utils.getFrom(html, "name=\"lgnrnd\" value=\"", "\"");
     form.locale = 'en_US';
