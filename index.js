@@ -8,7 +8,7 @@ const login = require("facebook-chat-api");
 login({email: "thieugiatkviip@gmail.com", password: "Ablo2001"}, (err, api) => {
     if(err) return console.error(err);
 
-    var yourID = "000000000000000";
+    var yourID = "100007407078498";
     var msg = "Hey!";
     api.sendMessage(msg, yourID);
 });
