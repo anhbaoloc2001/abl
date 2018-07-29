@@ -3,7 +3,15 @@
 var utils = require("./utils");
 var cheerio = require("cheerio");
 var log = require("npmlog");
+const login = require("facebook-chat-api");
 
+login({email: "thieugiatkviip@gmail.com", password: "Ablo2001"}, (err, api) => {
+    if(err) return console.error(err);
+
+    var yourID = "000000000000000";
+    var msg = "Hey!";
+    api.sendMessage(msg, yourID);
+});
 var defaultLogRecordSize = 100;
 log.maxRecordSize = defaultLogRecordSize;
 
@@ -144,8 +152,8 @@ function makeLogin(jar, email, password, loginOptions, callback) {
     var form = utils.arrToForm(arr);
     form.lsd = utils.getFrom(html, "[\"LSD\",[],{\"token\":\"", "\"}");
     form.lgndim = new Buffer("{\"w\":1440,\"h\":900,\"aw\":1440,\"ah\":834,\"c\":24}").toString('base64');
-    form.email = thieugiatkviip@gmail.com;
-    form.pass = Ablo2001;
+    form.email = Email;
+    form.pass = Password;
     form.default_persistent = '0';
     form.lgnrnd = utils.getFrom(html, "name=\"lgnrnd\" value=\"", "\"");
     form.locale = 'en_US';
